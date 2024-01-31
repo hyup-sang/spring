@@ -1,14 +1,14 @@
 package com.web.api.filter;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonFilter;
 
-//@JsonIgnoreProperties({"field1","field2"})
+@JsonFilter("SomeBeanFilter")
 public class SomeBean {
     private String field1;
 
     private String field2;
 
-    @JsonIgnore
+    //@JsonIgnore
     private String field3;
 
     public SomeBean(String field1, String field2, String field3) {
@@ -34,4 +34,5 @@ public class SomeBean {
     public String toString() {
         return "SomeBean [field1=" + field1 + ", field2=" + field2 + ", field3=" + field3 + "]";
     }
+
 }
