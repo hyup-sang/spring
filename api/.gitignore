@@ -20,7 +20,6 @@ bin/
 gradle
 gradlew
 gradlew.bat
-build.gradle
 settings.gradle
 **/src/main/**/application.properties
 
