@@ -10,8 +10,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class AopApplication implements CommandLineRunner {
-    private BusinessService1 businessService1;
     private Logger logger = LoggerFactory.getLogger(getClass());
+    private BusinessService1 businessService1;
 
     public AopApplication(BusinessService1 businessService1) {
         this.businessService1 = businessService1;
