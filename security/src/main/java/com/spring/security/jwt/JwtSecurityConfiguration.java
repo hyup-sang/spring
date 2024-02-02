@@ -121,4 +121,9 @@ public class JwtSecurityConfiguration {
                 .build();
     }
 
+    @Bean
+    public JwtEncoder jwtEncoder(JWKSource<SecurityContext> jwkSource) {
+        return new NimbusJwtEncoder(jwkSource);
+    }
+
 }
