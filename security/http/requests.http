@@ -1,0 +1,30 @@
+### Hello-world
+GET {{host}}/hello-world
+Content-Type: application/json
+Authorization: {{token}}
+
+### retrieve all todos
+GET {{host}}/todos
+Content-Type: application/json
+Authorization: {{token}}
+
+### retrieve specitic todos
+GET {{host}}/users/hong/todos
+Content-Type: application/json
+Authorization: {{token}}
+
+### create todos
+POST {{host}}/users/hong/todos
+Content-Type: application/json
+Authorization: {{token}}
+X-Csrf-Token: tlV5qOl5BB5WM6AOmX5X95eD3_TPT-Xtp_uTxtFu6vhEVHBKgzQYyt5NPCd7UJA7qVNjlPSx8sysKobAxJ-j9rUK28gmNRZ-
+
+{
+ "username" : "hong",
+ "description": "DSDSDDD"
+}
+
+### retrieve CSRF TOKEN
+GET {{host}}/csrf-token
+Content-Type: application/json
+Authorization: {{token}}
