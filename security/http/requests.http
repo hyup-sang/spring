@@ -17,7 +17,6 @@ Authorization: {{token}}
 POST {{host}}/users/hong/todos
 Content-Type: application/json
 Authorization: {{token}}
-X-Csrf-Token: tlV5qOl5BB5WM6AOmX5X95eD3_TPT-Xtp_uTxtFu6vhEVHBKgzQYyt5NPCd7UJA7qVNjlPSx8sysKobAxJ-j9rUK28gmNRZ-
 
 {
  "username" : "hong",
