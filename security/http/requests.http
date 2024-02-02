@@ -27,3 +27,8 @@ Authorization: {{token}}
 GET {{host}}/csrf-token
 Content-Type: application/json
 Authorization: {{token}}
+
+### authenticate jwt
+POST {{host}}/authenticate
+Content-Type: application/json
+Authorization: {{token}}
