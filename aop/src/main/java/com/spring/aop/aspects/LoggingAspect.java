@@ -11,18 +11,18 @@ import org.springframework.context.annotation.Configuration;
 public class LoggingAspect {
     private Logger logger = LoggerFactory.getLogger(getClass());
 
-    @Before("execution(* com.spring.aop.*.*.*(..))")
+    @Before("execution(* com.spring.aop.aspects.CommonPointcutConfig.allPackageConfigUsingBean())")
     public void logMethodCallBeforeExecution(JoinPoint joinPoint) {
         logger.info("Before Aspect - Method is called - {}", joinPoint);
     }
 
-    @After("execution(* com.spring.aop.*.*.*(..))")
+    @After("execution(* com.spring.aop.aspects.CommonPointcutConfig.businessPackageConfig())")
     public void logMethodCallAfterExecution(JoinPoint joinPoint) {
         logger.info("After Aspect - {} has executed",  joinPoint);
     }
 
     @AfterThrowing(
-        pointcut = "execution(* com.spring.aop.*.*.*(..))",
+        pointcut = "execution(* com.spring.aop.aspects.CommonPointcutConfig.businessAndDataPackageConfig())",
         throwing = "exception"
     )
     public void logMethodCallAfterException(JoinPoint joinPoint, Exception exception) {
@@ -31,7 +31,7 @@ public class LoggingAspect {
     }
 
     @AfterReturning(
-            pointcut = "execution(* com.spring.aop.*.*.*(..))",
+            pointcut = "execution(* com.spring.aop.aspects.CommonPointcutConfig.dataPackageConfig())",
             returning = "resultValue"
     )
     public void logMethodCallAfterSuccessfulExecution(
