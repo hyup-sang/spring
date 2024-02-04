@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
  * 인터페이스에 메서드가 추가 될 때마다 구현 클래스를 업데이트 해야 함
  * 많은 케이스를 테스트하기 어려움
  * */
-class SomeBusinessImplTest {
+class SomeBusinessImplStubTest {
     @Test
     void findTheGreatestFromAllData_basicScenario() {
         DataService dataServiceStub = new DataServiceStub1();
