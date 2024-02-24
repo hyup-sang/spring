@@ -21,7 +21,7 @@ public class JwtAuthenticationController {
     }
 
     @PostMapping("/authenticate")
-    public ResponseEntity<JwtTokenResponse> generateToken(
+    public ResponseEntity<String> generateToken(
             @RequestBody JwtTokenRequest jwtTokenRequest) {
 
         var authenticationToken =
@@ -34,6 +34,6 @@ public class JwtAuthenticationController {
 
         var token = tokenService.generateToken(authentication);
 
-        return ResponseEntity.ok(new JwtTokenResponse(token));
+        return ResponseEntity.ok(token);
     }
 }
