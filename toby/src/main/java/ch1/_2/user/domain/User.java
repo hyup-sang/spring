@@ -1,4 +1,4 @@
-package com.example.ch1.user.domain;
+package ch1._2.user.domain;
 
 public class User {
     String id;

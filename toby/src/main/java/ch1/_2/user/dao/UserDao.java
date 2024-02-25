@@ -1,9 +1,8 @@
-package com.example.ch1.user.dao;
+package ch1._2.user.dao;
 
-import com.example.ch1.user.domain.User;
+import ch1._2.user.domain.User;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
